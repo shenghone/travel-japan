@@ -5,7 +5,6 @@
 
 .smallPicWrapper:hover {
   cursor: pointer;
-
 }
 
 .smallPicWrapper > img {
@@ -13,7 +12,7 @@
   height: 100%;
   margin-right: 10px;
   object-fit: cover;
-  transition: 0.5s;
+  transition: 0.2s;
   filter: grayscale(100%);
 }
 

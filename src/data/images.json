@@ -4,7 +4,7 @@
       "title": "Sangenjaya",
       "titleKanji": "三軒茶屋",
       "imageLink": "/assets/lowerResolution/alex-knight-sangenjaya-setagaya-low.jpg",
-      "imageLinkHigh": "/assets/alex-knight-sangenjaya-setagaya.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/alex-knight-sangenjaya-setagaya-low.jpg",
       "prefecture": "Tokyo",
       "prefectureKanji": "東京都"
     },
@@ -12,7 +12,7 @@
       "title": "Ginza",
       "titleKanji": "銀座",
       "imageLink": "/assets/lowerResolution/daryan-shamkhali-ginza-chuo-low.jpg",
-      "imageLinkHigh": "/assets/daryan-shamkhali-ginza-chuo.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/daryan-shamkhali-ginza-chuo-low.jpg",
       "prefecture": "Tokyo",
       "prefectureKanji": "東京都"
     },
@@ -20,7 +20,7 @@
       "title": "Kiyomizu Dera",
       "titleKanji": "清水寺",
       "imageLink": "/assets/lowerResolution/david-emrich-kiyomizu-dera-kyoto-low.jpg",
-      "imageLinkHigh": "/assets/david-emrich-kiyomizu-dera-kyoto.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/david-emrich-kiyomizu-dera-kyoto-low.jpg",
       "prefecture": "Kyoto",
       "prefectureKanji": "京都"
     },
@@ -29,7 +29,7 @@
       "title": "Todaiji Temple",
       "titleKanji": "東大寺",
       "imageLink": "/assets/lowerResolution/gilles-desjardins-todaiji-temple-kyoto-low.jpg",
-      "imageLinkHigh": "/assets/gilles-desjardins-todaiji-temple-kyoto.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/gilles-desjardins-todaiji-temple-kyoto-low.jpg",
       "prefecture": "Kyoto",
       "prefectureKanji": "京都"
     },
@@ -37,7 +37,7 @@
       "title": "Meiji Jingu",
       "titleKanji": "明治神宮",
       "imageLink": "/assets/lowerResolution/leio-mclaren-meiji-jingu-shibuya-ku-low.jpg",
-      "imageLinkHigh": "/assets/leio-mclaren-meiji-jingu-shibuya-ku.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/leio-mclaren-meiji-jingu-shibuya-ku-low.jpg",
       "prefecture": "Tokyo",
       "prefectureKanji": "東京都"
     },
@@ -45,7 +45,7 @@
       "title": "Mt.Fuji",
       "titleKanji": "富士山",
       "imageLink": "/assets/lowerResolution/manuel-cosentino-mt-fuji-low.jpg",
-      "imageLinkHigh": "/assets/manuel-cosentino-mt-fuji.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/manuel-cosentino-mt-fuji-low.jpg",
       "prefecture": "Shizuoka x Yamanashi",
       "prefectureKanji": "靜岡県x山梨県"
     },
@@ -53,7 +53,7 @@
       "title": "Kabukicho",
       "titleKanji": "歌舞伎町",
       "imageLink": "/assets/lowerResolution/ryoji-iwata-kabukicho-Shinjuku-low.jpg",
-      "imageLinkHigh": "/assets/ryoji-iwata-kabukicho-Shinjuku.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/ryoji-iwata-kabukicho-Shinjuku-low.jpg",
       "prefecture": "Tokyo",
       "prefectureKanji": "東京都"
     },
@@ -61,7 +61,7 @@
       "title": "Kinkaku",
       "titleKanji": "金閣寺",
       "imageLink": "/assets/lowerResolution/tianshu-liu-kinkaku-kyoto-low.jpg",
-      "imageLinkHigh": "/assets/tianshu-liu-kinkaku-kyoto.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/tianshu-liu-kinkaku-kyoto-low.jpg",
       "prefecture": "Kyoto",
       "prefectureKanji": "京都"
     },
@@ -69,7 +69,7 @@
       "title": "Torii Gate",
       "titleKanji": "箱根神社鳥居",
       "imageLink": "/assets/lowerResolution/tianshu-liu-torii-gate-low.jpg",
-      "imageLinkHigh": "/assets/tianshu-liu-torii-gate.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/tianshu-liu-torii-gate-low.jpg",
       "prefecture": "Kanagawa",
       "prefectureKanji": "神奈川県"
     },
@@ -78,7 +78,7 @@
       "title": "Zamami Island",
       "titleKanji": "座間味島",
       "imageLink": "/assets/lowerResolution/romeo-zamami-Island-zamami-low.jpg",
-      "imageLinkHigh": "/assets/romeo-zamami-Island-zamami.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/romeo-zamami-Island-zamami-low.jpg",
       "prefecture": "Okinawa",
       "prefectureKanji": "沖縄県"
     },
@@ -86,7 +86,7 @@
       "title": "Somewhere in Japan",
       "titleKanji": "日本某處",
       "imageLink": "/assets/lowerResolution/clay-banks-170882-unsplash-low.jpg",
-      "imageLinkHigh": "/assets/clay-banks-170882-unsplash.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/clay-banks-170882-unsplash-low.jpg",
       "prefecture": "Unknown",
       "prefectureKanji": "不詳"
     },
@@ -94,7 +94,7 @@
       "title": "Saporro",
       "titleKanji": "札幌",
       "imageLink": "/assets/lowerResolution/denny-ryanto-saporro-low.jpg",
-      "imageLinkHigh": "/assets/denny-ryanto-saporro.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/denny-ryanto-saporro-low.jpg",
       "prefecture": "Hokkaido",
       "prefectureKanji": "北海道"
     },
@@ -102,7 +102,7 @@
       "title": "Somewhere in Japan",
       "titleKanji": "日本某處",
       "imageLink": "/assets/lowerResolution/fabrizio-chiagano-1053700-unsplash-low.jpg",
-      "imageLinkHigh": "/assets/fabrizio-chiagano-1053700-unsplash.jpg",
+      "imageLinkHigh": "/assets/lowerResolution/fabrizio-chiagano-1053700-unsplash-low.jpg",
       "prefecture": "Unknown",
       "prefectureKanji": "不詳"
     }

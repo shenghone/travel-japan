@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import RedDot from "./RedDot";
 import "../styles/Layout.css";
 
-function Layout({ children }) {
+const Layout = React.memo(function({ children }) {
   return (
     <div className="LayoutWrapper">
       <Logo />
@@ -11,6 +11,6 @@ function Layout({ children }) {
       {children}
     </div>
   );
-}
+});
 
 export default Layout;

@@ -6,7 +6,7 @@
   top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
+  display: grid;
   justify-items: center;
   align-items: center;
 }
@@ -33,7 +33,7 @@
   height: 70vh;
   background: #000;
   top: -5vh;
-  z-index: 1;
+  z-index: 10;
 }
 
 .leftContainer {
@@ -45,6 +45,9 @@
   position: absolute;
   left: 0;
   z-index: 1;
+
+  filter: blur(3px);
+  transition: 1.4s;
 }
 
 .currentPlaceClass {
@@ -62,7 +65,8 @@
   transform: translateX(-5rem);
   color: #000;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  transition: 0.5s;
+  transition: 0.8s;
+  transition-delay: 2s;
 }
 
 .textArea > h2 {
@@ -162,7 +166,7 @@
   }
 
   .textArea {
-    transform: translateX(-11rem);
+    transform: translateX(-8rem);
   }
 
   .description {
@@ -184,6 +188,9 @@
     width: 15rem;
     height: 2rem;
   }
+  .textArea {
+    transform: translateX(-8rem);
+  }
 }
 @media screen and (max-width: 400px) {
   .windowWrapper {
@@ -191,6 +198,10 @@
   }
   .leftContainer {
     height: 25vh;
+  }
+  .textArea {
+    transform: translateX(-6rem);
+    font-size: 0.8rem;
   }
 
   .pic > img {

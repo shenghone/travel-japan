@@ -1,11 +1,11 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useState } from "react";
 import { StatusContext, PlaceContext } from "../App";
 import { useResize } from "../customHook";
 import "../styles/Window.css";
 import { TweenMax, TimelineMax, Expo } from "gsap";
 import Map from "./Map";
 
-function Window() {
+const Window = React.memo(function() {
   const { start, setStart } = useContext(StatusContext);
   const { currentPlace } = useContext(PlaceContext);
   const leftContainerRef = useRef(null);
@@ -14,6 +14,9 @@ function Window() {
   const blockerRef = useRef(null);
   const h2Ref = useRef(null);
   const [width, onLoadWidth] = useResize();
+  const [moveToRight, setMoveToRight] = useState(false);
+
+  console.log(moveToRight);
 
   //once hovered in the big picture container, hide text
   const hideText = () => {
@@ -45,58 +48,55 @@ function Window() {
     }
 
     //move the map to right when user selected a picture
-    let et = new TimelineMax();
-    if (start && currentPlace) {
-      et.to(rightContainerRef.current, 0, {
-        xPercent: 0
-      }).to(rightContainerRef.current, 0.8, {
-        css: {
+    if (!moveToRight) {
+      let et = new TimelineMax();
+      if (start && currentPlace) {
+        et.to(rightContainerRef.current, 0, {
+          xPercent: 0,
+          opacity: 0.5,
+          onComplete: function() {
+            setMoveToRight(true);
+          }
+        }).to(rightContainerRef.current, 0.8, {
           opacity: 1
-        }
-      });
+        });
+      }
     }
-  }, [onLoadWidth, width, start, currentPlace]);
+  }, [moveToRight, onLoadWidth, width, start, currentPlace]);
 
   //to fade in the picture when user selected any picture
   useEffect(() => {
-    if (start && !currentPlace) {
+    if (!currentPlace) {
       TweenMax.set(leftContainerRef.current, {
         css: {
           zIndex: "-1"
         }
       });
     }
-    if (start && currentPlace) {
+    if (moveToRight) {
       TweenMax.set(leftContainerRef.current, {
-        css: {
-          opacity: 1,
-          filter: "blur(0)",
-          zIndex: 2
-        }
-      });
-      TweenMax.from(leftContainerRef.current, 0.8, {
-        css: {
-          scaleX: 0.8,
-          scaleY: 0.8,
-          opacity: 0,
-          filter: "blur(1px)"
-        }
-      });
-      TweenMax.from(textAreaRef.current, 1, {
-        x: -5,
         opacity: 0,
-        ease: Expo.easeOut
+        scaleX: 0.9,
+        scaleY: 0.9
+      });
+      TweenMax.to(leftContainerRef.current, 0.8, {
+        css: {
+          scaleX: 1,
+          scaleY: 1,
+          opacity: 1,
+          filter: "blur(0px)"
+        }
       });
     }
-  }, [start, currentPlace, leftContainerRef]);
+  }, [moveToRight, start, currentPlace, leftContainerRef]);
 
   //to fade out the "explore container"
   useEffect(() => {
     if (start) {
       TweenMax.to(blockerRef.current, 0.5, {
         css: {
-          scaleX: 1.1,
-          scaleY: 1.1,
+          scaleX: 1.2,
+          scaleY: 1.2,
           transformOrigin: "center",
           autoAlpha: 0
         },
@@ -143,6 +143,6 @@ function Window() {
       </div>
     </div>
   );
-}
+});
 
 export default Window;

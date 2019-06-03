@@ -65,6 +65,9 @@ path:hover {
 }
 
 @media screen and (max-width: 400px) {
+  svg {
+    transform: scale(1.9);
+  }
   .clickedPlaceClass {
     top: 3rem;
   }
