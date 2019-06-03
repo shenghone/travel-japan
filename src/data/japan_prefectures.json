@@ -1,0 +1,207 @@
+{
+  "prefectures": [
+    {
+      "prefecture": "Hokkaido",
+      "kanji": "北海道"
+    },
+    {
+      "prefecture": "Iwate",
+      "kanji": "岩手県"
+    },
+    {
+      "prefecture": "Fukushima",
+      "kanji": "福島県"
+    },
+    {
+      "prefecture": "Nagano",
+      "kanji": "長野県"
+    },
+    {
+      "prefecture": "Niigata",
+      "kanji": "新潟県"
+    },
+    {
+      "prefecture": "Akita",
+      "kanji": "秋田県"
+    },
+    {
+      "prefecture": "Gifu",
+      "kanji": "岐阜県"
+    },
+    {
+      "prefecture": "Aomori",
+      "kanji": "青森県"
+    },
+    {
+      "prefecture": "Yamagata",
+      "kanji": "山形県"
+    },
+    {
+      "prefecture": "Kagoshima",
+      "kanji": "鹿児島県"
+    },
+    {
+      "prefecture": "Hiroshima",
+      "kanji": "広島県"
+    },
+    {
+      "prefecture": "Hyogo",
+      "kanji": "兵庫県"
+    },
+    {
+      "prefecture": "Shizuoka",
+      "kanji": "静岡県"
+    },
+    {
+      "prefecture": "Miyazaki",
+      "kanji": "宮崎県"
+    },
+    {
+      "prefecture": "Kumamoto",
+      "kanji": "熊本県"
+    },
+
+    {
+      "prefecture": "Miyagi",
+      "kanji": "宮城県"
+    },
+    {
+      "prefecture": "Okayama",
+      "kanji": "岡山県"
+    },
+    {
+      "prefecture": "Kochi",
+      "kanji": "高知県"
+    },
+    {
+      "prefecture": "Shimane",
+      "kanji": "島根県"
+    },
+    {
+      "prefecture": "Tochigi",
+      "kanji": "栃木県"
+    },
+    {
+      "prefecture": "Gumma",
+      "kanji": "群馬県"
+    },
+    {
+      "prefecture": "Oita",
+      "kanji": "大分県"
+    },
+
+    {
+      "prefecture": "Yamaguchi",
+      "kanji": "山口県"
+    },
+
+    {
+      "prefecture": "Ibaraki",
+      "kanji": "茨城県"
+    },
+
+    {
+      "prefecture": "Mie",
+      "kanji": "三重県"
+    },
+
+    {
+      "prefecture": "Ehime",
+      "kanji": "愛媛県"
+    },
+    {
+      "prefecture": "Aichi",
+      "kanji": "愛知県"
+    },
+    {
+      "prefecture": "Chiba",
+      "kanji": "千葉県"
+    },
+    {
+      "prefecture": "Fukuoka",
+      "kanji": "福岡県"
+    },
+    {
+      "prefecture": "Wakayama",
+      "kanji": "和歌山県"
+    },
+    {
+      "prefecture": "Kyoto",
+      "kanji": "京都府"
+    },
+    {
+      "prefecture": "Yamanashi",
+      "kanji": "山梨県"
+    },
+    {
+      "prefecture": "Toyama",
+      "kanji": "富山県"
+    },
+    {
+      "prefecture": "Fukui",
+      "kanji": "福井県"
+    },
+    {
+      "prefecture": "Ishikawa",
+      "kanji": "石川県"
+    },
+
+    {
+      "prefecture": "Takushima",
+      "kanji": "徳島県"
+    },
+    {
+      "prefecture": "Nagasaki",
+      "kanji": "長崎県"
+    },
+    {
+      "prefecture": "Shiga",
+      "kanji": "滋賀県"
+    },
+
+    {
+      "prefecture": "Saitama",
+      "kanji": "埼玉県"
+    },
+
+    {
+      "prefecture": "Nara",
+      "kanji": "奈良県"
+    },
+
+    {
+      "prefecture": "Tottori",
+      "kanji": "鳥取県"
+    },
+
+    {
+      "prefecture": "Saga",
+      "kanji": "佐賀県"
+    },
+
+    {
+      "prefecture": "Kanagawa",
+      "kanji": "神奈川県"
+    },
+
+    {
+      "prefecture": "Okinawa",
+      "kanji": "沖縄県"
+    },
+
+    {
+      "prefecture": "Tokyo",
+      "kanji": "東京都"
+    },
+
+    {
+      "prefecture": "Osaka",
+      "kanji": "大阪府"
+    },
+
+    {
+      "prefecture": "Kagawa",
+      "kanji": "香川県"
+    }
+  ]
+}

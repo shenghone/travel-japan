@@ -1,0 +1,15 @@
+.redDotWrapper {
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background: #c23616;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  z-index: 3;
+  display: none;
+}

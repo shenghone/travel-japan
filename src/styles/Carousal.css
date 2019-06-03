@@ -1,0 +1,36 @@
+.carousalWrapper {
+  position: absolute;
+  width: 70vw;
+  height: 15vh;
+  display: flex;
+  bottom: 8%;
+  left: 15vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+@media screen and (max-width: 1024px) {
+  .carousalWrapper {
+    width: 70vw;
+    display: absolute;
+    bottom: -23vh;
+    left: 15vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .carousalWrapper {
+    bottom: -20vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carousalWrapper {
+    bottom: -10vh;
+  }
+}

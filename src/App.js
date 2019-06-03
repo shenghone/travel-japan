@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from "react";
+import Home from "./pages/Home";
+import "./App.css";
+
+export const StatusContext = createContext(null);
+export const PlaceContext = createContext(null);
 
 function App() {
+  const [start, setStart] = useState(false);
+  const [currentPlace, setCurrentPlace] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StatusContext.Provider value={{ start, setStart }}>
+      <PlaceContext.Provider value={{ currentPlace, setCurrentPlace }}>
+        <div className="App">
+          <Home />
+        </div>
+      </PlaceContext.Provider>
+    </StatusContext.Provider>
   );
 }
 

@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display&display=swap");
+.windowWrapper {
+  position: absolute;
+  width: 70vw;
+  height: 50vh;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.pic {
+  position: absolute;
+  width: 35vw;
+  height: 50vh;
+}
+.description {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  width: 25rem;
+  height: 3rem;
+  background: rgb(47, 243, 224, 0.9);
+  border-radius: 3px;
+}
+
+.blocker {
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  background: #000;
+  top: -5vh;
+  z-index: 1;
+}
+
+.leftContainer {
+  display: grid;
+  width: 35vw;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.currentPlaceClass {
+  transition: 1s;
+}
+
+.currentPlaceClass:hover {
+  transform: scale(1.02);
+}
+
+.textArea {
+  width: 35vw;
+  height: 10px;
+  position: absolute;
+  transform: translateX(-5rem);
+  color: #000;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.textArea > h2 {
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  background: rgba(256, 256, 256, 0.75);
+
+  padding: 0.4rem;
+  width: 180px;
+  text-align: center;
+}
+
+.textArea > h4 {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.76);
+  padding: 0.4rem;
+  width: 180px;
+  text-align: center;
+}
+
+.rightContainer {
+  display: grid;
+  right: 0;
+  position: absolute;
+  width: 50%;
+}
+
+.rightContainer:hover::after {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.pic > img {
+  width: 35vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.blocker > h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  letter-spacing: 0.75rem;
+  transition: 0.7s;
+  z-index: 10;
+}
+
+.blocker > h2:hover {
+  letter-spacing: 1.1rem;
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+@media screen and (max-width: 1024px) {
+  .windowWrapper {
+    position: relative;
+    width: 70vw;
+    height: 80vh;
+    top: 15vh;
+    left: 0;
+    transform: translate(0%, 0%);
+    background: #f9f1f0;
+  }
+
+  .blocker {
+    top: 5vh;
+  }
+
+  .description {
+    top: 12rem;
+  }
+  .rightContainer {
+    position: absolute;
+    width: 70vw;
+    height: 50vh;
+    top: 0;
+  }
+
+  .leftContainer {
+    position: absolute;
+    width: 70vw;
+    height: 30vh;
+    bottom: 0;
+  }
+  .pic > img {
+    height: 40vh;
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .windowWrapper {
+    height: 85vh;
+  }
+
+  .textArea {
+    transform: translateX(-11rem);
+  }
+
+  .description {
+    font-size: 0.8rem;
+    width: 22rem;
+    height: 2.5rem;
+  }
+  .leftContainer {
+    height: 30vh;
+  }
+  .pic > img {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .description {
+    font-size: 0.5rem;
+    width: 15rem;
+    height: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .windowWrapper {
+    height: 75vh;
+  }
+  .leftContainer {
+    height: 25vh;
+  }
+
+  .pic > img {
+    height: 25vh;
+  }
+}

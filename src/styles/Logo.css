@@ -1,0 +1,27 @@
+.logoWrapper {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  display: grid;
+}
+
+.smallDot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0.25rem;
+  display: grid;
+  align-self: center;
+  background: red;
+  border-radius: 50%;
+}
+
+.logoWrapper > h4 {
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  left: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
