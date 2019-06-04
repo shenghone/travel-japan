@@ -36,9 +36,8 @@
   position: absolute;
   left: 0;
   z-index: 1;
-
   filter: blur(3px);
-  transition: 1.4s;
+  transition: 0s;
 }
 
 .currentPlaceClass {
@@ -56,8 +55,7 @@
   transform: translateX(-5rem);
   color: #000;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  transition: 0.8s;
-  transition-delay: 2s;
+  transition: 0.3s;
 }
 
 .textArea > h2 {
@@ -95,6 +93,10 @@
   width: 35vw;
   height: 50vh;
   object-fit: cover;
+}
+
+.pic > img:hover {
+  cursor: pointer;
 }
 
 .blocker {
