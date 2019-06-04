@@ -74,6 +74,14 @@ const Window = React.memo(function() {
         }
       });
     }
+
+    if (!moveToRight) {
+      TweenMax.set(leftContainerRef.current, {
+        opacity: 0,
+        scaleX: 0.9,
+        scaleY: 0.9
+      });
+    }
     if (moveToRight) {
       TweenMax.set(leftContainerRef.current, {
         opacity: 0,
@@ -94,7 +102,7 @@ const Window = React.memo(function() {
   //to fade out the "explore container"
   useEffect(() => {
     if (start) {
-      TweenMax.to(blockerRef.current, 0.5, {
+      TweenMax.to(blockerRef.current, 0.3, {
         css: {
           scaleX: 1.2,
           scaleY: 1.2,

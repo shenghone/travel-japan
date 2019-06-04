@@ -28,12 +28,12 @@ const Carousal = React.memo(function(props) {
       TweenMax.set(carousalRef.current, {
         opacity: 0
       });
-      TweenMax.set(carousalRef.current, {
+      TweenMax.to(carousalRef.current, 0, {
         opacity: 1,
         y: "0%"
       });
     }
-  }, [currentPlace, start, carousalRef, width]);
+  }, [start, width, currentPlace]);
   return (
     <section ref={carousalRef} className="carousalWrapper">
       {start

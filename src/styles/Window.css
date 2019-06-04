@@ -27,15 +27,6 @@
   border-radius: 3px;
 }
 
-.blocker {
-  position: absolute;
-  width: 70vw;
-  height: 70vh;
-  background: #000;
-  top: -5vh;
-  z-index: 10;
-}
-
 .leftContainer {
   display: grid;
   width: 35vw;
@@ -106,6 +97,15 @@
   object-fit: cover;
 }
 
+.blocker {
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  background: #000;
+  top: -5vh;
+  z-index: 20;
+}
+
 .blocker > h2 {
   position: absolute;
   left: 50%;
@@ -140,6 +140,7 @@
 
   .description {
     top: 12rem;
+    z-index: 10;
   }
   .rightContainer {
     position: absolute;

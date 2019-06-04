@@ -7,6 +7,7 @@
   left: 15vw;
   overflow-x: scroll;
   overflow-y: hidden;
+  z-index: 1;
 }
 
 ::-webkit-scrollbar {
