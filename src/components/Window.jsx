@@ -93,7 +93,8 @@ const Window = React.memo(function() {
           scaleX: 1,
           scaleY: 1,
           opacity: 1,
-          filter: "blur(0px)"
+          filter: "blur(0px)",
+          zIndex: 5
         }
       });
     }
