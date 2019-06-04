@@ -32,6 +32,6 @@
 
 @media screen and (max-width: 400px) {
   .carousalWrapper {
-    bottom: -10vh;
+    bottom: -15vh;
   }
 }
