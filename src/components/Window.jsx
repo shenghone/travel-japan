@@ -16,8 +16,6 @@ const Window = React.memo(function() {
   const [width, onLoadWidth] = useResize();
   const [moveToRight, setMoveToRight] = useState(false);
 
-  console.log(moveToRight);
-
   //once hovered in the big picture container, hide text
   const hideText = () => {
     if (start && currentPlace && leftContainerRef) {
@@ -26,7 +24,7 @@ const Window = React.memo(function() {
     }
   };
 
-  //once cusor leave the left container, show text
+  //once cursor leave the left container, show text
   const showText = () => {
     if (start && currentPlace && leftContainerRef) {
       const textArea = leftContainerRef.current.children[1];
@@ -36,11 +34,14 @@ const Window = React.memo(function() {
 
   useEffect(() => {
     //center the map when the app started but user hasn't selected any picture
+    //when the user's screen width is greater than 1024px
     if (start && !currentPlace && onLoadWidth > 1024) {
       TweenMax.set(rightContainerRef.current, {
         xPercent: -50
       });
     }
+
+    //if the user's screen width is less than 1024px, leave the map as is
     if (width && width < 1024) {
       TweenMax.set(rightContainerRef.current, {
         xPercent: 0

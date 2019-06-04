@@ -9,7 +9,8 @@ const SmallPic = React.memo(function(props) {
   const percentage = 1 / 13;
   const imageRef = useRef(null);
   const { setCurrentPlace } = useContext(PlaceContext);
-  //every image loads, add the percentage based on the total picture in database
+  // every image loads, add the percentage based on the total picture in database
+  // for potential real time loader use
   return (
     <div
       className="smallPicWrapper"

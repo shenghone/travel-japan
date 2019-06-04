@@ -15,6 +15,8 @@ const Carousal = React.memo(function(props) {
   const carousalRef = useRef(null);
   const [width] = useResize();
 
+  //if the user's screen width is less than 1024 and the user
+  //hasn't select any place, move the carousal closer to the map
   useEffect(() => {
     const wid = window.innerWidth;
     if (start && !currentPlace && wid < 1024) {
