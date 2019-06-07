@@ -1,0 +1,137 @@
+.aboutContentWrapper {
+  position: absolute;
+  display: grid;
+  width: 100vw;
+  height: 100%;
+  background: url("/assets/ismaelAbelleira.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  align-content: center;
+  justify-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+
+.innerContent {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: grid;
+  border-radius: 5px;
+  transition: 1.2s;
+}
+
+.innerContent::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background: #000;
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.innerContent > h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.contentBody {
+  color: #ddd;
+  margin: 3rem;
+  line-height: 1.8rem;
+  height: 250px;
+  justify-self: center;
+  overflow-y: scroll;
+  text-align: justify;
+}
+
+.contentBody::first-letter {
+  font-size: 130%;
+}
+
+.author > a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  left: 36%;
+  transform: translateX(-50%);
+}
+
+.author > a:hover {
+  opacity: 0.65;
+}
+
+.space {
+  color: transparent;
+}
+
+.contentBody > a {
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+.contentBody > a:hover {
+  opacity: 0.65;
+}
+
+.toggleButton {
+  position: absolute;
+  padding: 0.5rem;
+  background: transparent;
+  outline: none;
+  border: 1px solid #000;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 10%;
+  bottom: 1rem;
+  letter-spacing: 0.06rem;
+  transition: 0.5s;
+}
+
+.toggleButton:hover {
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .innerContent {
+    width: 600px;
+  }
+  .author > a {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .innerContent {
+    width: 400px;
+  }
+  .contentBody {
+    margin: 1rem;
+  }
+  .author > a {
+    left: 22%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .innerContent {
+    width: 300px;
+  }
+  .author > a {
+    left: 6%;
+  }
+}

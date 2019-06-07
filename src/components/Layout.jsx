@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import RedDot from "./RedDot";
+import NavBar from "./NavBar";
 import "../styles/Layout.css";
 
 const Layout = React.memo(function({ children }) {
@@ -8,6 +9,7 @@ const Layout = React.memo(function({ children }) {
     <div className="LayoutWrapper">
       <Logo />
       <RedDot />
+      <NavBar />
       {children}
     </div>
   );

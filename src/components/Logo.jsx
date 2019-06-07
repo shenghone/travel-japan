@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Logo.css";
 
 function Logo() {
   return (
     <div className="logoWrapper">
-      <h4>travel japan</h4>
       <div className="smallDot" />
+      <h4>
+        <Link style={{ color: "#000", textDecoration: "none" }} to="/">
+          travel japan
+        </Link>
+      </h4>
     </div>
   );
 }

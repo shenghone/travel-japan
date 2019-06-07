@@ -3,7 +3,8 @@ import Layout from "../components/Layout";
 import Carousal from "../components/Carousal";
 import Window from "../components/Window";
 
-function Home() {
+function Home(props) {
+  console.log(props);
   return (
     <Layout>
       <Window />

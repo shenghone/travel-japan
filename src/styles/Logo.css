@@ -3,6 +3,9 @@
   top: 8%;
   left: 8%;
   display: grid;
+  width: 155px;
+  
+  z-index: 2;
 }
 
 .smallDot {
@@ -11,7 +14,7 @@
   height: 20px;
   top: 0.25rem;
   display: grid;
-  align-self: center;
+  left: 0px;
   background: red;
   border-radius: 50%;
 }
@@ -20,8 +23,12 @@
   position: absolute;
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
-  left: 28px;
+  right: 0;
   font-weight: bold;
   text-transform: uppercase;
-  position: relative;
+  color: #000;
+}
+
+.logoWrapper > h4 :hover {
+  opacity: 0.65;
 }
