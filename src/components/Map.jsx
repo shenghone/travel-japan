@@ -87,14 +87,14 @@ const Map = React.memo(function() {
     <div className="mapWrapper">
       {currentPlace ? (
         <div className="prefetureClass">
-          <h4>{currentPlace.prefecture}</h4>
-          <h5>{currentPlace.prefectureKanji}</h5>
+          <h4 style={{ color: "#c23616" }}>{currentPlace.prefecture}</h4>
+          <h5 style={{ color: "#c23616" }}>{currentPlace.prefectureKanji}</h5>
         </div>
       ) : null}
       {clickedPlace ? (
         <div className="clickedPlaceClass">
-          <h4>{clickedPlace.prefecture}</h4>
-          <h5>{clickedPlace.kanji}</h5>
+          <h4 style={{ color: "#000" }}>{clickedPlace.prefecture}</h4>
+          <h5 style={{ color: "#000" }}>{clickedPlace.kanji}</h5>
         </div>
       ) : null}
       <svg

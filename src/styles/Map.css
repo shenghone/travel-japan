@@ -17,14 +17,14 @@ svg {
 .prefetureClass {
   position: absolute;
   bottom: 1rem;
-  color: #c23616;
+
 }
 
 .clickedPlaceClass {
   top: 1rem;
   right: 10vw;
   position: absolute;
-  color: #000;
+
 }
 
 path {
