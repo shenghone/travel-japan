@@ -23,13 +23,13 @@ function AboutContent() {
         <h2>七転び八起き</h2>
         <p className="contentBody">
           <span className="space">space</span>
-          Japan is a beautiful country. The culture and the scnery is just
+          Japan is a beautiful country. The culture and the scenery are just
           amazing. I found some awesome pictures on Unsplash. Thinking someone
           should tell the stories behind these stunning buildings. After a few
           attempts, I realized the pictures are speaking for themself already.
-          It will be a whole series for me just to mess around new design and
-          tell people how beautiful this world is in my way. This site is built
-          with React and GSAP.
+          It will be a whole "travel" series for me just to mess around new
+          design and tell people how beautiful this world is in my way. This
+          site is built with React and GSAP.
           <br />
           <br />
           <span className="space">space</span>
