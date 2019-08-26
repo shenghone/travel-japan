@@ -91,6 +91,7 @@
 .toggleButton {
   position: absolute;
   padding: 0.5rem;
+
   background: transparent;
   outline: none;
   border: 1px solid #000;

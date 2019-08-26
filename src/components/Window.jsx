@@ -1,24 +1,21 @@
 import React, { useRef, useEffect, useContext, useState } from "react";
-import { StatusContext, PlaceContext } from "../App";
+import { PlaceContext } from "../App";
 import { useResize } from "../customHook";
 import "../styles/Window.css";
-import { TweenMax, TimelineMax, Expo } from "gsap";
+import { TweenMax, TimelineMax } from "gsap";
 import Map from "./Map";
 
 const Window = React.memo(function() {
-  const { start, setStart } = useContext(StatusContext);
   const { currentPlace } = useContext(PlaceContext);
   const leftContainerRef = useRef(null);
   const textAreaRef = useRef(null);
   const rightContainerRef = useRef(null);
-  const blockerRef = useRef(null);
-  const h2Ref = useRef(null);
   const [width, onLoadWidth] = useResize();
   const [moveToRight, setMoveToRight] = useState(false);
 
   //once hovered in the big picture container, hide text
   const hideText = () => {
-    if (start && currentPlace && leftContainerRef) {
+    if (currentPlace && leftContainerRef) {
       const textArea = leftContainerRef.current.children[1];
       textArea.style.opacity = 0;
     }
@@ -26,7 +23,7 @@ const Window = React.memo(function() {
 
   //once cursor leave the left container, show text
   const showText = () => {
-    if (start && currentPlace && leftContainerRef) {
+    if (currentPlace && leftContainerRef) {
       const textArea = leftContainerRef.current.children[1];
       textArea.style.opacity = 1;
     }
@@ -35,7 +32,7 @@ const Window = React.memo(function() {
   useEffect(() => {
     //center the map when the app started but user hasn't selected any picture
     //when the user's screen width is greater than 1024px
-    if (start && !currentPlace && onLoadWidth > 1024) {
+    if (!currentPlace && onLoadWidth > 1024) {
       TweenMax.set(rightContainerRef.current, {
         xPercent: -50
       });
@@ -51,7 +48,7 @@ const Window = React.memo(function() {
     //move the map to right when user selected a picture
     if (!moveToRight) {
       let et = new TimelineMax();
-      if (start && currentPlace) {
+      if (currentPlace) {
         et.to(rightContainerRef.current, 0, {
           xPercent: 0,
           opacity: 0.5,
@@ -63,57 +60,51 @@ const Window = React.memo(function() {
         });
       }
     }
-  }, [moveToRight, onLoadWidth, width, start, currentPlace]);
+  }, [moveToRight, onLoadWidth, width, currentPlace]);
 
   //to fade in the picture when user selected any picture
   useEffect(() => {
     if (!currentPlace) {
-      TweenMax.set(leftContainerRef.current, {
-        css: {
-          zIndex: "-1"
-        }
-      });
+      const anim = () => {
+        TweenMax.set(leftContainerRef.current, {
+          css: {
+            zIndex: "-1"
+          }
+        });
+      };
+      window.requestAnimationFrame(anim);
     }
 
     if (!moveToRight) {
-      TweenMax.set(leftContainerRef.current, {
-        opacity: 0,
-        scaleX: 0.9,
-        scaleY: 0.9
-      });
+      const anim = () => {
+        TweenMax.set(leftContainerRef.current, {
+          opacity: 0,
+          scaleX: 0.9,
+          scaleY: 0.9
+        });
+      };
+      window.requestAnimationFrame(anim);
     }
     if (moveToRight) {
-      TweenMax.set(leftContainerRef.current, {
-        opacity: 0,
-        scaleX: 0.9,
-        scaleY: 0.9
-      });
-      TweenMax.to(leftContainerRef.current, 0.8, {
-        css: {
-          scaleX: 1,
-          scaleY: 1,
-          opacity: 1,
-          filter: "blur(0px)",
-          zIndex: 5
-        }
-      });
+      const anim = () => {
+        TweenMax.set(leftContainerRef.current, {
+          opacity: 0,
+          scaleX: 0.9,
+          scaleY: 0.9
+        });
+        TweenMax.to(leftContainerRef.current, 0.8, {
+          css: {
+            scaleX: 1,
+            scaleY: 1,
+            opacity: 1,
+            filter: "blur(0px)",
+            zIndex: 5
+          }
+        });
+      };
+      window.requestAnimationFrame(anim);
     }
-  }, [moveToRight, start, currentPlace, leftContainerRef]);
-
-  //to fade out the "explore container"
-  useEffect(() => {
-    if (start) {
-      TweenMax.to(blockerRef.current, 0.3, {
-        css: {
-          scaleX: 1.2,
-          scaleY: 1.2,
-          transformOrigin: "center",
-          autoAlpha: 0
-        },
-        Ease: Expo.easeInout
-      });
-    }
-  }, [start]);
+  }, [moveToRight, currentPlace, leftContainerRef]);
 
   return (
     <div className="windowWrapper">
@@ -141,16 +132,11 @@ const Window = React.memo(function() {
       <div ref={rightContainerRef} className="pic rightContainer">
         <Map />
       </div>
-      {!currentPlace && start ? (
+      {!currentPlace ? (
         <div className="description">
           <h2>select a picture to start the journey</h2>
         </div>
       ) : null}
-      <div ref={blockerRef} className="blocker">
-        <h2 ref={h2Ref} onClick={() => setStart(true)}>
-          explore
-        </h2>
-      </div>
     </div>
   );
 });

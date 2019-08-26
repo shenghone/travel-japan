@@ -23,7 +23,7 @@ function AboutContent() {
         <h2>七転び八起き</h2>
         <p className="contentBody">
           <span className="space">space</span>
-          Japan is a beautiful country. The culture and the scenery are just
+          Japan is a beautiful country. The culture and the scenery is just
           amazing. I found some awesome pictures on Unsplash. Thinking someone
           should tell the stories behind these stunning buildings. After a few
           attempts, I realized the pictures are speaking for themself already.

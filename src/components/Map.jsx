@@ -53,32 +53,44 @@ const Map = React.memo(function() {
       const currentSVG = svgRef.current.children[1];
       //app started, user selected one picture but did not click any Perfecture
       if (currentSVG && currentPlace && !clickedPlace) {
-        TweenMax.set("*", { fill: "transparent" });
-        TweenMax.to(getId(currentPlace.prefecture), 0.8, {
-          fill: "#c23616"
-        });
+        const anim = () => {
+          TweenMax.set("*", { fill: "transparent" });
+          TweenMax.to(getId(currentPlace.prefecture), 0.8, {
+            fill: "#c23616"
+          });
+        };
+        window.requestAnimationFrame(anim);
       }
       //app started, user selected one picture and clicked one Perfecture
       if (currentSVG && currentPlace && clickedPlace) {
-        TweenMax.set("*", { fill: "transparent" });
-        TweenMax.to(`#${clickedPlace.prefecture}`, 0.8, {
-          fill: "#000000"
-        });
-        TweenMax.to(getId(currentPlace.prefecture), 0.8, {
-          fill: "#c23616"
-        });
+        const anim = () => {
+          TweenMax.set("*", { fill: "transparent" });
+          TweenMax.to(`#${clickedPlace.prefecture}`, 0.8, {
+            fill: "#000000"
+          });
+          TweenMax.to(getId(currentPlace.prefecture), 0.8, {
+            fill: "#c23616"
+          });
+        };
+        window.requestAnimationFrame(anim);
       }
       //app started, user did not select any picture but clicked one Perfecture
       if (currentSVG && !currentPlace && clickedPlace) {
-        TweenMax.set("*", { fill: "transparent" });
-        TweenMax.to(`#${clickedPlace.prefecture}`, 0.8, {
-          fill: "#000000"
-        });
+        const anim = () => {
+          TweenMax.set("*", { fill: "transparent" });
+          TweenMax.to(`#${clickedPlace.prefecture}`, 0.4, {
+            fill: "#000000"
+          });
+        };
+        window.requestAnimationFrame(anim);
       }
 
       //app started, user did not select nor clicked any Perfecture
       if (currentSVG && !currentPlace && !clickedPlace) {
-        TweenMax.set("*", { fill: "transparent" });
+        const anim = () => {
+          TweenMax.set("*", { fill: "transparent" });
+        };
+        window.requestAnimationFrame(anim);
       }
     }
   }, [currentPlace, svgRef, start, clickedPlace]);
